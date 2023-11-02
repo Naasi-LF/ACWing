@@ -3,7 +3,7 @@
 using namespace std;
 const int N = 1e6+10;
 int n,q[N];
-void quick_sort(int l,int r)
+void quick_sort1(int l,int r)
 { 
 	if(l==r)
 		return;
@@ -14,8 +14,8 @@ void quick_sort(int l,int r)
 		do j--; while(q[j]>x);
 		if(i<j)	swap(q[i],q[j]); 
 	}
-	quick_sort(l,j);
-	quick_sort(j+1,r);
+	quick_sort1(l,j);
+	quick_sort1(j+1,r);
 }
 void quick_sort2(int l,int r)
 { 
